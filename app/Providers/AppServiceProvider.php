@@ -23,6 +23,8 @@ class AppServiceProvider extends ServiceProvider
         if (Schema::hasTable($table)) {
             Config::load();
         }
+        
+        Schema::defaultStringLength(191);
     }
 
     /**
